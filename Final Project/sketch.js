@@ -1,6 +1,13 @@
 var myRec = new p5.SpeechRec(); // new P5.SpeechRec object
 var textHPos = 100;
 
+// Need to loard custom fonts but wasn't working. https://p5js.org/reference/#/p5/textFont 
+// var fontRegular, fontBold;
+// function preload() {
+//    fontRegular = loadFont("assets/ChaparralPro-Regular.otf");
+//    fontBold = loadFont("assets/ChaparralPro-Regular.otf");
+// }
+
 function setup() {
     createCanvas(window.innerWidth - 10, window.innerHeight - 10);
     // instructions:
@@ -17,6 +24,7 @@ function draw() {
     text("(Say something)", 100, textHPos+40);
 }
 
+//Voice not working. Documentation says it needs to be running on a server? 
 function showResult() {
     if (myRec.resultValue == true) {
         textSize(56);
